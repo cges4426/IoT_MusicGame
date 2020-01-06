@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="stylesheet" href='/static/style.css' />
+<title>Raspberry</title>
+</head>
+
+<body>
+
+	<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<input class="button button5" type="button" id="TestBtn" name="TestBtn" value="How to play" onClick="window.open('/static/assets/images/how_to_play.png','','');" >
+<!--
+	<hr>
+-->
+    <Br>
+    <div class="example3" id="example3">
+		Mission Countdown<Br>
+		<input class="button button2" type="button" id="TestBtn" name="TestBtn" value="Test" onClick="test_photo()" >
+		<input class=" button1" type="button" name="Countdown" id="Countdown" value=" "   disabled="disabled">
+		
+		<input class="button button3" type="button" id="StartBtn" name="StartBtn" value="Start" onClick="move_forward();" >
+		<Br>
+
+		<img class="backimg" id="status_img" src="/static/assets/images/waiting.png" >
+		<p>Mission:
+		<input class="textbox textbox1 " type="text" name="mission_msg" id="mission_msg" value=""  disabled="disabled">
+		<input hidden="true" type="text" name="num_now" id="num_now" value=""  disabled="disabled">
+		<input hidden="true" type="text" name="voice_word" id="voice_word" value=""  disabled="disabled">
+		<input hidden="true" type="button" name="Randombutt" id="Randombutt" value="Random" onClick="getRandom();" >
+		<input hidden="true" type="text" name="voice_now" id="voice_now" value="0"  disabled="disabled">
+
+		</p>
+		<p>Result: 
+		<textarea name="result_message" id="result_message" value=""  disabled="disabled"></textarea>
+		</p>
+
+		
+		<p>Time:
+		<input type="text" id="time_mark" class="textbox textbox2 ">
+		Grade:
+		<input type="text" id="grade" class="textbox textbox2 "></p>
+		
+		
+				
+		</div>
+	<Br>
+    <div id="ytplayer">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/opB3NEtnw68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+</body>
+<foot>
+	<hr>
+	<p>
+		<a href="https://github.com/cges4426/Webapp">Github</a>
+		<a href="https://www.youtube.com/channel/UCotNB9HMTG3Ov2sRwnNvtQw?view_as=subscriber">Demo Video</a>
+	</p>
+
+</foot>
+
+</html>

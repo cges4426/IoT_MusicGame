@@ -22,7 +22,7 @@ Just have fun with the interactive music game!!
 
 ## How to do
 ### Step 1	Setup raspberry pi
-* 參考檔案 How to backup a raspberry pi3.doc
+* 參考檔案 Internet of Things Practical 1&2.doc
 * Build another sudoer
     * 官方文件	https://www.raspberrypi.org/documentation/linux/usage/users.md
     * 給予權限	

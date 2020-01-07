@@ -22,17 +22,61 @@ Just have fun with the interactive music game!!
 
 ## How to do
 ### Step 1	Setup raspberry pi
-* 參考檔案 Internet of Things Practical 1&2.doc
+* 參考檔案 How to backup a raspberry pi3.doc
 * Build another sudoer
     * 官方文件	https://www.raspberrypi.org/documentation/linux/usage/users.md
-    * 給予權限	
-        * `visudo`
-        * `bob ALL=(ALL) NOPASSWD: ALL`
+    * `sudo adduser [username]`
+    * setting for the user
+    * 給予sudoer權限	
+        * `sudo visudo`
+        * under the line `root    ALL=(ALL:ALL) ALL`
+            *  add `[username] ALL=(ALL) NOPASSWD: ALL`
+    * change to the user
+        * `su - [username]`
 
 
 ### Step 2	Build a flask website
 * 官方文件
-* https://projects.raspberrypi.org/en/projects/python-web-server-with-flask
+    *  https://projects.raspberrypi.org/en/projects/python-web-server-with-flask
+* Check for python package
+    * `pip3 list`
+    * If there is no "flask"
+        * `pip3 install flask` 
+* Start to build
+    * 建立網站資料夾 `mkdir [project_name] & cd [project_name] `
+    * build the main python file
+        * app.py
+        * ``` 
+            from flask import Flask
+
+            app = Flask(__name__)
+
+            @app.route('/')
+            def index():
+                return 'Hello world'
+
+            if __name__ == '__main__':
+                app.run(debug=True, host='0.0.0.0')
+            ```
+        * 後續也是利用該檔案串接其他API
+    * Add other files for the websites
+        * templates/index.html 前端頁面
+        * static/ 存放JS與CSS等檔案
+    * We can get the project structure
+        * ```
+            [project_name]/
+              app.py
+                ...
+              templates/
+                index.html
+                ...
+              static/
+                style.css
+                scripts.js
+                assets/
+                  images/
+                  photos/
+            ```
 
 ### Step 2	Test for Picamera
 * 接上鏡頭 (接任何設備前請先關閉樹梅派電源)
@@ -81,4 +125,4 @@ Just have fun with the interactive music game!!
 * http://yhhuang1966.blogspot.com/2017/08/google-api.html
 
 
-###### tags: `raspberry pi3`
+###### tags: `raspberry pi`

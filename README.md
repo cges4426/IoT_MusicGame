@@ -22,7 +22,7 @@ Just have fun with the interactive music game!!
 
 ## How to do
 ### Step 1	Setup raspberry pi
-* 參考檔案 How to backup a raspberry pi3.doc
+* 參考檔案 [How to backup a raspberry pi3.doc](https://github.com/cges4426/IoT_MusicGame/blob/master/Internet%20of%20Things%20Practical%201%262.docx)
 * Build another sudoer
     * 官方文件	https://www.raspberrypi.org/documentation/linux/usage/users.md
     * `sudo adduser [username]`
@@ -45,7 +45,7 @@ Just have fun with the interactive music game!!
 * Start to build
     * 建立網站資料夾 `mkdir [project_name] & cd [project_name] `
     * build the main python file
-        * app.py
+        * [app.py](https://github.com/cges4426/IoT_MusicGame/blob/master/app.py)
         * ``` 
             from flask import Flask
 
@@ -81,7 +81,7 @@ Just have fun with the interactive music game!!
 ### Step 2	Test for Picamera
 * 接上鏡頭 (接任何設備前請先關閉樹梅派電源)
 * Pi Setting: 開啟攝影機
-* Taking photos: camera.py
+* Taking photos: [camera.py](https://github.com/cges4426/IoT_MusicGame/blob/master/camera.py)
 
 ![](https://i.imgur.com/tMSA4Yg.png)
 
@@ -105,13 +105,13 @@ Just have fun with the interactive music game!!
 * 以Flask為網站後端，串接PY API
 * flask主程式: app.py
 * 前端：
-    * templates/index.html
-    * static/scripts.js
-    * static/style.css
+    * templates/[index.html](https://github.com/cges4426/IoT_MusicGame/blob/master/templates/index.html)
+    * static/[scripts.js](https://github.com/cges4426/IoT_MusicGame/blob/master/static/scripts.js)
+    * static/[style.css](https://github.com/cges4426/IoT_MusicGame/blob/master/static/style.css)
 * PY API:
-    * camera.py
-    * microphone.py
-    * openvino_fd_myriad.py
+    * [camera.py](https://github.com/cges4426/IoT_MusicGame/blob/master/camera.py)
+    * [microphone.py](https://github.com/cges4426/IoT_MusicGame/blob/master/microphone.py)
+    * [openvino_fd_myriad.py](https://github.com/cges4426/IoT_MusicGame/blob/master/openvino_fd_myriad.py)
 
 ## Links
 * [DEMO video](https://youtu.be/_YB645ao-5U)

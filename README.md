@@ -81,9 +81,35 @@ Just have fun with the interactive music game!!
 ### Step 2	Test for Picamera
 * 接上鏡頭 (接任何設備前請先關閉樹梅派電源)
 * Pi Setting: 開啟攝影機
-* Taking photos: [camera.py](https://github.com/cges4426/IoT_MusicGame/blob/master/camera.py)
 
 ![](https://i.imgur.com/tMSA4Yg.png)
+* 語法參數說明 https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md
+    * 測試拍照 `raspistill -o image.png`
+    * 等待時間2秒(2000毫秒)`raspistill -t 2000 -o image.jpg`
+    * 決定相片尺寸 `raspistill -o image.jpg -w 640 -h 480`
+    * 旋轉180度 `raspistill -o a.jpg -rot 180 ` 
+* Taking photos: [camera.py](https://github.com/cges4426/IoT_MusicGame/blob/master/camera.py)
+```
+from picamera import PiCamera
+from time import sleep
+
+camera = PiCamera()
+
+def take(name):
+    
+    img_route = './static/assets/photos/'
+    camera.rotation = 180
+    camera.resolution = (380, 320)
+    camera.start_preview()
+    sleep(1)
+    camera.capture(img_route +name+'.jpg')
+    camera.stop_preview()
+
+
+if __name__ == '__main__':
+    take('123')
+
+```
 
 ### Step 3	Install OpenVINO™ toolkit for Raspbian
 * 官方文件 https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_raspbian.html
